@@ -16,7 +16,7 @@ void setup() {
     while((millis() - previousMillis) <= 4000) {}
 
     Keyboard.write(9); //TAB
-    for (int i = 0; i <= sizeof(key); i++) {
+    for (unsigned int i = 0; i <= sizeof(key); i++) {
         Keyboard.print(key[i]);
         delay(100);
     }
@@ -41,5 +41,3 @@ void loop() {
         }
     }
 }
-
-
