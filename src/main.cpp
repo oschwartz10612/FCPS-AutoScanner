@@ -6,7 +6,7 @@ int buttonState;
 unsigned long loopInterval = 100;
 unsigned long previousMillis = 0;
 
-String key = "2390N";  //"2390N"
+String key = "2390N";
 
 void setup() {
     Keyboard.begin();
@@ -18,7 +18,7 @@ void setup() {
     Keyboard.write(9); //TAB
     for (int i = 0; i <= sizeof(key); i++) {
         Keyboard.print(key[i]);
-        delay(200);
+        delay(100);
     }
 }
 
@@ -37,7 +37,7 @@ void loop() {
             Keyboard.write(111); //o
             Keyboard.write(176); //Enter
             Keyboard.write(176); //Enter
-            delay(1000);
+            delay(500);
         }
     }
 }
