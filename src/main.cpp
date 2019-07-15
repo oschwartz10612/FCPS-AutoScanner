@@ -40,7 +40,7 @@ void loop() {
             Keyboard.write(111); //o
 	    delay(delayTime);
             Keyboard.write(176); //Enter
-	    delay(delayTime)
+	    delay(delayTime);
             Keyboard.write(176); //Enter
             delay(500);
         }
