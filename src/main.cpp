@@ -5,7 +5,7 @@
 int buttonState;
 unsigned long loopInterval = 100;
 unsigned long previousMillis = 0;
-int delayTime = 100;
+int delayTime = 50;
 
 String key = "2390N";
 
@@ -14,7 +14,7 @@ void setup() {
     pinMode(BUTTON, INPUT_PULLUP);
 
     previousMillis = millis();
-    while((millis() - previousMillis) <= 4000) {}
+    while((millis() - previousMillis) <= 3000) {}
 
     Keyboard.write(9); //TAB
     for (unsigned int i = 0; i <= sizeof(key); i++) {
@@ -32,15 +32,15 @@ void loop() {
 
         if (buttonState == LOW) {
             Keyboard.write(9); //TAB
-	    delay(delayTime);
+	        delay(delayTime);
             Keyboard.write(9); //TAB
-	    delay(delayTime);
+	        delay(delayTime);
             Keyboard.write(9); //TAB
-	    delay(delayTime);
+	        delay(delayTime);
             Keyboard.write(111); //o
-	    delay(delayTime);
+	        delay(delayTime);
             Keyboard.write(176); //Enter
-	    delay(delayTime);
+	        delay(delayTime);
             Keyboard.write(176); //Enter
             delay(500);
         }
