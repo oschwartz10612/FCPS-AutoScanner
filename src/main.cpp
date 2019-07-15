@@ -5,6 +5,7 @@
 int buttonState;
 unsigned long loopInterval = 100;
 unsigned long previousMillis = 0;
+int delayTime = 100;
 
 String key = "2390N";
 
@@ -18,7 +19,7 @@ void setup() {
     Keyboard.write(9); //TAB
     for (unsigned int i = 0; i <= sizeof(key); i++) {
         Keyboard.print(key[i]);
-        delay(100);
+        delay(delayTime);
     }
 }
 
@@ -30,12 +31,16 @@ void loop() {
         buttonState = digitalRead(BUTTON);
 
         if (buttonState == LOW) {
-            Serial.println("Pressed");
             Keyboard.write(9); //TAB
+	    delay(delayTime);
             Keyboard.write(9); //TAB
+	    delay(delayTime);
             Keyboard.write(9); //TAB
+	    delay(delayTime);
             Keyboard.write(111); //o
+	    delay(delayTime);
             Keyboard.write(176); //Enter
+	    delay(delayTime)
             Keyboard.write(176); //Enter
             delay(500);
         }
